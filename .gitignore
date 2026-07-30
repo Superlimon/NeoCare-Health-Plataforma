@@ -1,0 +1,21 @@
+# Ignorar entorno virtual de Python (NUNCA SUBIR)
+venv/
+.venv/
+env/
+ENV/
+
+# Ignorar archivos compilados de Python
+__pycache__/
+*.pyc
+
+# Ignorar librerías instaladas del Frontend (NUNCA SUBIR)
+frontend/node_modules/
+node_modules/
+
+# Ignorar compilaciones de React / Vite
+frontend/dist/
+frontend/build/
+
+# Ignorar variables de entorno secretas
+.env
+*.env
