@@ -5,3 +5,4 @@ sqlalchemy
 PyJWT
 argon2-cffi
 passlib[argon2]
+psycopg2-binary
