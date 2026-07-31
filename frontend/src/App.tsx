@@ -5,7 +5,7 @@ import Dashboard from "./components/Dashboard";
 
 // --- Configuración de Axios para enviar Token JWT ---
 export const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "http://127.0.0.1:8000",
+baseURL: import.meta.env.VITE_API_URL || "https://neo-care-health-plataforma.onrender.com",
 });
 
 // Interceptor: añade automáticamente el token a CADA petición
