@@ -16,9 +16,15 @@ from app.database import SessionLocal, engine, Base, Session
 from . import schemas
 Base.metadata.create_all(bind=engine)
 app = FastAPI()
+origins = [
+    "https://neo-care-health-plataforma-p8fylrlu0.vercel.app",  # Tu URL exacta de Vercel
+    "https://neo-care-health-plataforma.vercel.app",            # Tu URL principal
+    "http://localhost:5173",                                     # Para pruebas locales
+    "http://127.0.0.1:8000"
+]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_origins=[origins],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
