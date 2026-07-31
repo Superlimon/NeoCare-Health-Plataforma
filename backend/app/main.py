@@ -14,7 +14,6 @@ from typing import Optional,List
 from app.models import Usuarios, Tableros, Tarjetas, Registro_Trabajo, Listas
 from app.database import SessionLocal, engine, Base, Session
 from . import schemas
-Base.metadata.create_all(bind=engine)
 app = FastAPI()
 origins = [
     "https://neo-care-health-plataforma-p8fylrlu0.vercel.app",  # Tu URL exacta de Vercel
@@ -37,6 +36,7 @@ ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24
 # 1. Inicializamos el verificador de Argon2
 ph = PasswordHasher()
 
+Base.metadata.create_all(bind=engine)
 def get_db():
     db = SessionLocal()
     try:
