@@ -4,6 +4,8 @@ import Login from "./components/Login";
 import Dashboard from "./components/Dashboard";
 
 // --- Configuración de Axios para enviar Token JWT ---
+
+
 export const api = axios.create({
 baseURL: import.meta.env.VITE_API_URL || "https://neo-care-health-plataforma.onrender.com",
 });
